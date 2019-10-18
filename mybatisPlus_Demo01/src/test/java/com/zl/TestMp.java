@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @ClassName: TestMp
@@ -32,6 +33,12 @@ public class TestMp {
         employee.setEmail("zhanglei@qq.com");
         employee.setGender(1);
         employeeMapper.insert(employee);
+    }
+
+    @Test
+    public void testSelectCustomizer() {
+        List<Employee> employees = employeeMapper.selectCustomizer();
+        System.out.println(employees);
     }
 
 }
