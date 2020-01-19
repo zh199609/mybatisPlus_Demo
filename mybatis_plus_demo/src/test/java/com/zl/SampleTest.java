@@ -62,8 +62,8 @@ public class SampleTest {
         Page<Person> page = new Page<>();
         page.setSize(1).setCurrent(2);
 
-        /*IPage<Person> userIPage = personMapper.selectPageVo(page);
-        System.out.println(userIPage.getRecords());*/
+        IPage<Person> userIPage = personMapper.selectPageVo(page);
+        System.out.println(userIPage.getRecords());
 
         QueryWrapper<Person> queryWrapper = new QueryWrapper<>();
         Person person1 = new Person();

@@ -41,4 +41,9 @@ public class TestMp {
         System.out.println(employees);
     }
 
+    @Test
+    public void test() {
+        System.out.println((5 / 2) - ((5 % 2) == 0 ? 1 : 0));
+    }
+
 }
